@@ -1,0 +1,97 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+
+<!--Section: Content-->
+<section class="">
+    {% if user.id %}
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-primary text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Categories</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ categories|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-warning text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Buses</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ products|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-bus fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-success text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Upcoming Trip</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ upcoming_trip|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-file-invoice fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="card card-default rounded-0 shadow border border-dark">
+        <div class="card-body">
+            <div class="container-fluid">
+                <h2 class="text-center fw-bold">Welcome to Online Bus Ticket Reservation System</h2>
+                <hr>
+                <p>
+                    About Us<br>
+                    Welcome to Travel Management System, your ultimate solution for seamless bus travel experiences. Our platform is dedicated to revolutionizing the way you explore and book bus journeys, making your travel dreams a reality.
+                    <br><br>Our Mission
+                    At Travel Management System, our mission is to empower travelers like you with easy and convenient access to bus travel options, ensuring safe, comfortable, and enjoyable journeys. We strive to bring a positive impact on your travel experiences by providing a user-friendly and feature-rich platform that caters to your unique needs.
+                    <br><br>What We Offer
+                    <br>Effortless Booking: Our user-friendly interface allows you to effortlessly search for available buses, compare fares, and book your preferred seats for a hassle-free booking process.
+                    <br>Wide Range of Routes: Whether you're traveling for business or leisure, we offer a diverse selection of bus routes to various destinations, ensuring you have options that suit your itinerary.
+                    <br>Real-time Updates: Stay informed with real-time updates on bus schedules, arrivals, and departures, so you can plan your journey with confidence.
+                    <br>Secure Transactions: Your safety and privacy are our top priorities. Our secure payment gateway ensures that your transactions are protected and your information remains confidential.
+                    <br>Exceptional Customer Support: Have a question or need assistance? Our dedicated customer support team is here to help you every step of the way, providing prompt and reliable assistance.
+
+                    <br><br>Our Commitment
+                    <br>We are committed to delivering a seamless travel management experience that simplifies the way you travel by bus. Whether you're a frequent traveler or embarking on a new adventure, Travel Management System Name is your trusted companion for memorable bus journeys.
+
+                    <br><br>Join Us on Our Journey
+                    Thank you for choosing Travel Management System as your travel partner. Join us on this exciting journey to explore new destinations, create lasting memories, and experience the joy of travel like never before.
+
+                    <br><br>For any inquiries or feedback, please don't hesitate to reach out to us at 123@gmail.com or 1234567890.
+
+                    <br>Happy travels!
+                    <br>Your Travel Management System Team
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+
+</div> {% endblock pageContent %}
